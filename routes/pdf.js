@@ -11,7 +11,7 @@ router.post("/", function (req, res, next) {
 
     console.log("The file was saved!");
     res.setHeader('Content-Disposition', `attachment; filename=${fileName}`);
-    res.setHeader("Content-Type", contentType);
+    res.setHeader("Content-Type", "application/pdf");
     res.send(buf);
 
     // Create a new PDF document
